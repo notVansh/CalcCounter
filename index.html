@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>CalcCounter</title>
+  </head>
+  <body>
+    <header class="ui container" style="margin-top: 20px;">
+        <h1 style="text-align: center; color: #6c63ff; letter-spacing: 2px; cursor: default; margin: 0; font-size: 3rem; font-weight: 900;">CalcCounter</h1>
+        <h4 style="text-align: center; color: #6c63ff; text-transform: uppercase; letter-spacing: 2px; margin: 0; cursor: default; font-size: 2rem; font-weight: 900;">Made by Vansh</h4>
+    </header>
+    <form name="formCalci">
+      <div class="ui containerr">
+        <div class="ui grid">
+          <div class="four wide column" style="background: #0f1722">
+            <div class="ui vertical fluid tabular menu" style="border: none">
+              <div class="item" style="color: #fff; text-align: center; text-transform: uppercase; letter-spacing: 3px; font-size: 1.5rem; margin-bottom: 30px;">
+                CalcCounter
+              </div>
+              <a class="active-item item" id="calc-active"> Calculator </a>
+              <a class="active-item item" id="coun-active"> Counter </a>
+            </div>
+          </div>
+          <div class="twelve wide stretched column" style="padding: 0;">
+            <div class="ui segment" style="background: #1d293a; padding: 50px; overflow: hidden;">
+              <div class="ui four column grid calc" id="calc-disp" style="display: flex !important; align-items: center; justify-content: center; height: 480px; overflow: hidden;">
+                <div class="row" style="padding: 0">
+                  <div
+                    class="column"
+                    style="
+                      padding: 0;
+                      width: 320px;
+                      height: 80px;
+                    "
+                  >
+                    <input
+                      id="finalanswer"
+                      readonly
+                      name="answers"
+                      type="text"
+                      style="padding: 0; margin: 0"
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="row" style="padding: 0">
+                  <div
+                    class="column active-item calc-btn"
+                    style="width: 160px !important"
+                  >
+                    <input
+                      id="clearbutton"
+                      onclick="formCalci.answers.value = '' "
+                      type="button"
+                      value="AC"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += ' % ' "
+                      type="button"
+                      value="%"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += ' / ' "
+                      type="button"
+                      value="/"
+                    />
+                  </div>
+                </div>
+                <div class="row" style="padding: 0">
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '7' "
+                      type="button"
+                      value="7"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '8' "
+                      type="button"
+                      value="8"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '9' "
+                      type="button"
+                      value="9"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += ' * ' "
+                      type="button"
+                      value="x"
+                    />
+                  </div>
+                </div>
+                <div class="row" style="padding: 0">
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '4' "
+                      type="button"
+                      value="4"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '5' "
+                      type="button"
+                      value="5"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '6' "
+                      type="button"
+                      value="6"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += ' - ' "
+                      type="button"
+                      value="-"
+                    />
+                  </div>
+                </div>
+                <div class="row" style="padding: 0">
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '3' "
+                      type="button"
+                      value="3"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '2' "
+                      type="button"
+                      value="2"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '1' "
+                      type="button"
+                      value="1"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += ' + ' "
+                      type="button"
+                      value="+"
+                    />
+                  </div>
+                </div>
+                <div class="row" style="padding: 0">
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '0' "
+                      type="button"
+                      value="0"
+                    />
+                  </div>
+                  <div class="column active-item calc-btn">
+                    <input
+                      onclick="formCalci.answers.value += '.' "
+                      type="button"
+                      value="."
+                    />
+                  </div>
+                  <div
+                    class="column active-item calc-btn"
+                    style="width: 160px !important; background: #6c63ff"
+                  >
+                    <input
+                      onclick="formCalci.answers.value = eval(formCalci.answers.value) "
+                      type="button"
+                      value="="
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="ui grid calc count-cls" id="coun-disp" style="display: none; margin: 0;">
+                  <div class="count-cls" style="height: 480px; padding: 0;">
+                      <div class="four wide column active-item calc-btn" style="width: 320px !important; font-size: 1.4rem;">
+                        <input type="button" onClick="onClickPos()" value="+" style="width: 320px !important;">
+                      </div>
+                      <div class="four wide column calc-btn" style="background: #0f1722; width: 320px !important; color: #fff; font-size: 1.4rem;">
+                        <p><div style="" id="clicks">0</div></p>
+                      </div>
+                      <div class="four wide column active-item calc-btn" style="width: 320px !important; font-size: 1.4rem;">
+                        <input type="button" onClick="onClickNeg()" value="-" style="width: 320px !important;">
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script>
+        var clicks = 0;
+        function onClickPos() {
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+        };
+        function onClickNeg() {
+            clicks -= 1;
+            document.getElementById("clicks").innerHTML = clicks;
+        };
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#coun-active").click(function(){
+                $("#coun-disp").fadeIn(600);
+                $("#calc-disp").hide();
+            });
+        });
+        $(document).ready(function(){
+            $("#calc-active").click(function(){
+                $("#calc-disp").fadeIn(600);
+                $("#coun-disp").hide();
+            });
+        });
+    </script>
+  </body>
+</html>
